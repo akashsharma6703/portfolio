@@ -1,0 +1,1044 @@
+/* Fonts */
+:root {
+    --heading-font: "Quicksand", sans-serif;
+    --nav-font: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: linear-gradient(135deg,
+            #0c0c0c 0%,
+            #000000 15%,
+            #000000 35%,
+            #000000 50%,
+            #000000 70%,
+            #000000 85%,
+            #020202 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Scroll Button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 999;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+#myBtn:hover {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Animated background elements */
+.bg-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+.shape:nth-child(1) {
+    width: 120px;
+    height: 80px;
+    border-radius: 15px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    transform: rotate(15deg);
+}
+
+.shape:nth-child(2) {
+    width: 90px;
+    height: 140px;
+    border-radius: 12px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+    transform: rotate(-20deg);
+}
+
+.shape:nth-child(3) {
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+    transform: rotate(25deg);
+}
+
+.shape:nth-child(4) {
+    width: 80px;
+    height: 120px;
+    border-radius: 8px;
+    top: 10%;
+    right: 30%;
+    animation-delay: 1s;
+    transform: rotate(-10deg);
+}
+
+.shape:nth-child(5) {
+    width: 110px;
+    height: 70px;
+    border-radius: 14px;
+    bottom: 40%;
+    right: 20%;
+    animation-delay: 3s;
+    transform: rotate(30deg);
+}
+
+.shape:nth-child(6) {
+    width: 95px;
+    height: 95px;
+    border-radius: 20px;
+    top: 40%;
+    left: 5%;
+    animation-delay: 5s;
+    transform: rotate(-15deg);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(var(--start-rotation, 0deg));
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(calc(var(--start-rotation, 0deg) + 180deg));
+    }
+}
+
+/* Header styles */
+h2 {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+h3 {
+    color: rgba(255, 255, 255, 0.9);
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+h4,
+h5 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+header {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px !important;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Navigation styles */
+
+.navbar-toggler {
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: 800;
+    font-family: var(--heading-font);
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+}
+
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-family: var(--nav-font);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 12px 24px !important;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.navbar-nav .nav-link.active,
+.nav-link:hover {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Home page styles */
+
+
+.hero {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.hero h1 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-image img {
+    width: 300px;
+    height: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.cta-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.home,
+.about,
+.portfolio,
+.service,
+.skills,
+.achievements,
+.contact {
+    padding-top: 120px !important;
+    padding-bottom: 100px !important;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* About page styles */
+.content {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+}
+
+.about1-text,
+.about2-text {
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    padding: 40px;
+}
+
+.about1-text:hover,
+.about2-text:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about2-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+/* Skills Section */
+.service .service-item-inner .htm {
+    color: #ea642d;
+}
+
+.service .service-item-inner .cs {
+    color: #056cb0;
+}
+
+.service .service-item-inner .jav {
+    color: #e09e27;
+}
+
+.service .service-item-inner .boots {
+    color: #7710f1;
+}
+
+.service .service-item-inner .reac {
+    color: #5ed3f3;
+}
+
+.service .service-item-inner .wind {
+    color: #36b7f0;
+}
+
+.service .service-item-inner .ph {
+    color: #677ab0;
+}
+
+.service .service-item-inner .my {
+    color: #d88b0b;
+}
+
+.service .service-item-inner .gi {
+    color: #000000;
+}
+
+.service .service-item-inner .ps {
+    color: #2fa3f7;
+}
+
+.service .service-item-inner .ai {
+    color: #f77800;
+}
+
+.service .service-item {
+    flex: 0 0 .33%;
+    -ms-flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.service .service-item .service-item-inner {
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 700px;
+    height: 250px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+.serv h5 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+.service .service-item .service-item-inner:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.service .service-item .service-item-inner .progress {
+    background: rgba(255, 255, 255, 0.2);
+    height: 8px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+
+.service .service-item .service-item-inner .progress .progress-in {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #fff;
+    border-radius: 4px;
+}
+
+.service .service-item .service-item-inner .icon {
+    height: 60px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    border-radius: 18px;
+}
+
+.service .service-item .service-item-inner .icon .fa {
+    font-size: 35px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+.service .service-item .service-item-inner h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--contrast-color);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+/* Skills Section */
+
+/* Portfolio Section */
+
+.portfolio .portfolio-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.portfolio .portfolio-wrapper:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+}
+
+.portfolio .portfolio-wrapper:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.portfolio .portfolio-wrapper:hover .portfolio-image .portfolio-hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio .portfolio-wrapper .portfolio-image {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(2px);
+}
+
+.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn:hover {
+    color: #333;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content {
+    padding: 25px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-meta .project-type {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fbbf24;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating i {
+    font-size: 0.8rem;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-tech .tech-badge {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+.portfolio .portfolio-wrapper .portfolio-content .portfolio-tech .tech-badge:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+}
+
+.portfolio .portfolio-cta .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.portfolio .portfolio-cta .cta-buttons .btn {
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 0.925rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+/* Portfolio Section */
+
+/* Achievements Section */
+.achievements .portfolio-wrapper {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.achievements .portfolio-item {
+    margin: 0;
+}
+
+.achievements .portfolio-wrapper:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+}
+
+.achievements .portfolio-wrapper:hover .portfolio-image img {
+    transform: scale(1.05);
+}
+
+.achievements .portfolio-wrapper .portfolio-image {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+.achievements .portfolio-wrapper .portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.achievements .portfolio-wrapper .portfolio-image .portfolio-hover .portfolio-actions .action-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.achievements .portfolio-wrapper .portfolio-content {
+    padding: 25px;
+}
+
+.achievements .portfolio-wrapper .portfolio-content .portfolio-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.achievements .portfolio-wrapper .portfolio-content .portfolio-meta .project-type {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.achievements .portfolio-wrapper .portfolio-content .portfolio-meta .project-rating i {
+    font-size: 0.8rem;
+}
+
+.achievements .portfolio-wrapper .portfolio-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+}
+
+.achievements .portfolio-wrapper .portfolio-content p {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.achievements .dip {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    transition: all 0.3s ease;
+}
+
+.achievements .dip:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+}
+
+/* Achievements Section */
+
+/* Services page styles */
+.service {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+    color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 45px;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    margin: 0 auto 25px;
+}
+
+.design {
+    color: #dfaf86;
+}
+
+.front {
+    color: #38a4e9;
+}
+
+.back {
+    color: #d6d6d6;
+}
+
+.full {
+    color: #d4880b;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.mail {
+    color: #f2ca28;
+}
+
+.phone {
+    color: #2cbb00;
+}
+
+.map {
+    color: #f52e17;
+}
+
+.contact .contact-info-area .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contact .contact-info-area .method-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.contact .contact-info-area .method-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.contact .contact-info-area .method-card:hover .card-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact .contact-info-area .method-card:hover .card-icon i {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact .contact-info-area .method-card .card-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 14px;
+    display: flex;
+    color: rgba(255, 255, 255, 0.8);
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-info-area .method-card .card-icon i {
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.contact .contact-info-area .method-card .card-content {
+    flex: 1;
+}
+
+.contact .contact-info-area .method-card .card-content h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact .contact-info-area .method-card .card-content p {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Footer styles */
+#footer {
+    padding: 30px 0;
+}
+
+.footer-content {
+    padding: 30px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    padding: 5px 10px;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.copyright {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    #footer {
+        margin-top: 20px;
+    }
+
+    .home,
+    .about,
+    .portfolio,
+    .service,
+    .skills,
+    .achievements,
+    .contact {
+        padding-top: 120px !important;
+        padding-bottom: 100px !important;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* Adjust padding for mobile */
+    .page {
+        padding: 30px 20px 20px;
+    }
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    .content {
+        padding: 10px 30px;
+    }
+
+    .contact .contact-info-area .method-card .card-content p {
+        font-size: 16px !important;
+    }
+
+    .home,
+    .about,
+    .portfolio,
+    .service,
+    .skills,
+    .achievements,
+    .contact {
+        padding-top: 80px !important;
+        padding-bottom: 0px !important;
+    }
+
+    .content-wrapper {
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 24px !important;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .service .service-item {
+        flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    #footer {
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    .footer-links {
+        gap: 15px;
+        flex-direction: row;
+    }
+
+    .footer-links a {
+        display: block;
+        text-align: center;
+    }
+
+}
